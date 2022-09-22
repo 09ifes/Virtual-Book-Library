@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="homepage-top-section">
+    <h1 class="homepage-heading" style="font-size: 3.5rem">My Library</h1>
+    </div>
+    <div class="book-details">
+      <div class="number-field"></div>
+      <div class="book-name"><span class="span-centered">Book Name</span></div>
+      <div class="book-author"><span class="span-centered">Author</span></div>
+      <div class="book-rating"><span class="span-centered">Rating</span></div>
+      <a href="{{ url_for('add') }}" style="display:inline-block; position:relative; bottom:40%; padding-left:70px">Add New Book</a>
+    </div>
+
+    {% if length > 0: %}
+
+    {% for book in all_books: %}
+      <div class="book-entry">
+          <div class="number-field"><span class="span-centered" style="padding-left:14px; font-weight: bold">{{ book['number'] }}</span></div>
+          <div class="book-name entry-centered"><span class="span-centered">{{ book['name'] }}</span></div>
+          <div class="book-author entry-centered"><span class="span-centered">{{ book['author'] }}</span></div>
+          {% if book['rating'] == 'None' or book['rating'] == '':%}
+          <div class="book-rating entry-centered"><span class="span-centered">N/A</span></div>
+          {% else: %}
+          <div class="book-rating entry-centered"><span class="span-centered">{{ book['rating'] }}/10</span></div>
+          {% endif %}
+          <span class="span-centered" style="padding:0 20px 0 40px"><a href="{{ url_for('edit', id=book['id']) }}">Edit Rating</a></span>
+          <span class="span-centered"><a href="{{ url_for('delete', id=book['id']) }}">Delete</a></span>
+      </div>
+
+    {% endfor %}
+
+    {% else: %}
+    <p style="font-size: 1.8rem">Library is empty.</p>
+    {% endif %}
+
+    <div style="width:100%; min-height:100px">
+
+    </div>
+
+
+
+</body>
+</html>

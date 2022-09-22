@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<form style="margin-top:60px" method="POST" action="{{ url_for('home') }}" novalidate>
+  {{ form.csrf_token }}
+  {{ form.book.label }} {{ form.book(size=30) }}
+  {{ form.author.label }} {{ form.author(size=30) }}
+  {{ form.rating.label }} {{ form.rating(size=30) }}
+  {{ form.add_book }}
+</form>
+
+
+
+</body>
+</html>

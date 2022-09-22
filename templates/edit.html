@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<form style="margin-top:60px; text-align:center" method="POST" action="{{ url_for('home') }}" novalidate>
+    <p style="font-weight:bold">Book Name: {{ book[0] }}</p>
+    <p style="font-weight:bold">Current Rating: {{ book[2] }}</p>
+    <div>
+      {{ form.new_rating(size=20, placeholder='New Rating') }}
+      {{ form.change_rating(size=15, placeholder='Change Rating', style="color:black") }}
+    </div>
+</form>
+</body>
+</html>

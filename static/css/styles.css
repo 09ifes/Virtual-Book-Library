@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background-color: #faf9e3;
+}
+.homepage-top-section {
+  margin-top: -40px;
+  text-align: center;
+  min-height: 400px;
+  width: 100%;
+  background-image: url('https://image.shutterstock.com/image-illustration/dark-theme-blue-abstract-background-260nw-2068596287.jpg');
+  background-size: 100% 450px;
+}
+.homepage-heading {
+  color: white;
+  position: relative;
+  top: 190px;
+}
+.book-details {
+  width: 100%;
+  height: 40px;
+  background-color: #a2a29f;
+  border-top-width: 1.5px;
+  border-bottom-width: 1.5px;
+  border-left-width: 1.5px;
+  border-right-width: 1.5px;
+  border-style: solid;
+  position: static;
+  font-weight: 600;
+}
+.book-name, .book-author, .book-rating {
+  border-right-style: solid;
+  border-right-width: 1.5px;
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  top: -25px;
+}
+.number-field {
+  border-right-style: solid;
+  border-right-width: 1.5px;
+  display: inline-block;
+  height: 40px;
+  width: 3%;
+}
+.book-name {
+  width: 30%
+}
+.book-author {
+  width: 25%
+}
+.book-rating {
+  width: 20%
+}
+.span-centered {
+  position: relative;
+  display: inline-block;
+  top: 25%;
+  bottom: 25%;
+  padding-left: 5px;
+}
+.book-entry {
+  width: 100%;
+  height: 40px;
+  border-bottom-width: 1.5px;
+  border-left-width: 1.5px;
+  border-right-width: 1.5px;
+  border-top-width: 0px;
+  border-style: solid;
+  position: static;
+}
+.entry-centered {
+  top: 0px;
+}
